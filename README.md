@@ -1,16 +1,22 @@
-# sqlilabs_Edited
+############## NOTICE ############################################# MODIFIED BY: saizar #####################
+#                                                                                                           #
+#	- sqli-labs is an extraordinary set of labs                                                             #
+#	specifically designed to exploit vulnerabilities based on sql injections,                               #
+#	that was originally created by Audi-1 "Dhakkan". Later it was modified by Rinkish to update it for php7.#
+#																											#
+#	- Rinkish left the work incomplete. More than a half of the laboratories, including some challenges,    #
+#	were non-functional. I have taken the liberty of continuing with the work                               #
+#	and finishing modifying all the .php that did not work, thus leaving 100% of the labs functional.       #
+#                                                                                                           #
+#############################################################################################################
 
-- sqli-labs is an extraordinary set of labs specifically designed to exploit vulnerabilities based on sql injections, that was originally created by Audi-1 "Dhakkan". Later it was modified by Rinkish to update it for php7.
-- Rinkish left the work incomplete. More than a half of the laboratories, including some challenges, were non-functional. I have taken the liberty of continuing with the work	and finishing modifying all the .php that did not work, thus leaving 100% of the labs functional.
+#¡¡¡¡¡¡ IMPORTANT NOTE !!!!!!#: 
 
-¡¡¡¡¡¡ IMPORTANT NOTE !!!!!! 
-
-# - Do not expose these labs to the internet, that would lead to a severe security breach on your server.
+# Do not expose these labs to the internet, that would lead to a severe security breach on your server.
 
 
 ########## Sqlilabs setup instructions ##########
 
--This installation method has only been tested on Parrot OS 4.11
 
 Place sqlilabs folder into /var/www/html/
 
@@ -53,6 +59,10 @@ If everything works fine, you should see a list of completed actions like this:
 If not, you should check that all the previous steps have been executed correctly.
 
 There is the original sqli-labs repository created by Dhakkan: https://github.com/Audi-1/sqli-labs
+
+If you want to see something different to "Dhakkan" in the welcome page, use this command:
+
+	for i in $(find /var/www/html/sqlilabs -type f -name \*\.php); do sed -i 's/Dhakkan/<YourName>/g' $i; done
 
 There is the repository of the modification that Rinkish made to update it to php7: https://github.com/Rinkish/Sqli_Edited_Version
  
