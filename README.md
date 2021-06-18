@@ -1,16 +1,13 @@
-############## NOTICE ############################################# MODIFIED BY: saizar #####################
-#                                                                                                           #
-#	- sqli-labs is an extraordinary set of labs                                                             #
-#	specifically designed to exploit vulnerabilities based on sql injections,                               #
-#	that was originally created by Audi-1 "Dhakkan". Later it was modified by Rinkish to update it for php7.#
-#																											#
-#	- Rinkish left the work incomplete. More than a half of the laboratories, including some challenges,    #
-#	were non-functional. I have taken the liberty of continuing with the work                               #
-#	and finishing modifying all the .php that did not work, thus leaving 100% of the labs functional.       #
-#                                                                                                           #
-#############################################################################################################
 
-#¡¡¡¡¡¡ IMPORTANT NOTE !!!!!!#: 
+- sqli-labs is an extraordinary set of labs
+specifically designed to exploit vulnerabilities based on sql injections,
+that was originally created by Audi-1 "Dhakkan". Later it was modified by Rinkish to update it for php7.
+
+- Rinkish left the work incomplete. More than a half of the laboratories, including some challenges,
+were non-functional. I have taken the liberty of continuing with the work
+and finishing modifying all the .php that did not work, thus leaving 100% of the labs functional.
+
+¡¡¡¡¡¡ IMPORTANT NOTE !!!!!! 
 
 # Do not expose these labs to the internet, that would lead to a severe security breach on your server.
 
