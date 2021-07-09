@@ -25,7 +25,7 @@ Place sqlilabs folder into /var/www/html/
 
 > CREATE USER test IDENTIFIED BY 'test123'; or create the user you want, but remenber to modify the data in /sql-connections/db-creds.php
 
-> GRANT ALL PRIVILEGES ON *.* TO 'test'@'localhost' IDENTIFIED BY 'test123';
+> GRANT ALL PRIVILEGES ON \*.\* TO 'test'@'localhost' IDENTIFIED BY 'test123';
 
 > exit;
 
