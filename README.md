@@ -66,7 +66,7 @@ If not, you should check that all the previous steps have been executed correctl
 
 If you want to see something different to "YourName" or "Dhakkan" in the welcome page, use this command:
 
-	for i in $(find /var/www/html/sqlilabs_edited -type f -name \*\.php); do sed -i 's/YourName/<YourName>/g' $i; done
+	for i in $(find /var/www/html/sqlilabs_edited -type f -name \*\.php); do sed -i 's/Dhakkan/<YourName>/g' $i; done
 
 There is the original sqli-labs repository created by Dhakkan: https://github.com/Audi-1/sqli-labs
 
