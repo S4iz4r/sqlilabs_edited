@@ -7,6 +7,8 @@ that was originally created by Audi-1 "Dhakkan". Later it was modified by Rinkis
 were non-functional. I have taken the liberty of continuing with the work
 and finishing modifying all the .php that did not work, thus leaving 100% of the labs functional.
 
+- Actually not working in PHP version 8!
+
 ¡¡¡¡¡¡ IMPORTANT NOTE !!!!!! 
 
 # Do not expose these labs to the internet, that would lead to a severe security breach on your server.
@@ -15,11 +17,13 @@ and finishing modifying all the .php that did not work, thus leaving 100% of the
 ########## Sqlilabs setup instructions ##########
 
 
-Place sqlilabs folder into /var/www/html/
+Place sqlilabs_edited folder into /var/www/html/
 
-> apt install mariadb-server
+> sudo apt install mariadb-server
 
-> service mysql start
+> sudo service mysql start
+
+> sudo mysql
 
 > use mysql;
 
@@ -29,15 +33,15 @@ Place sqlilabs folder into /var/www/html/
 
 > exit;
 
-> service mysql restart
+> sudo service mysql restart
 
-> apt install php-mysql
+> sudo apt install php-mysql
 
-> phpenmod mysqli
+> sudo phpenmod mysqli
 
-> service apache2 start
+> sudo service apache2 start
 
-Open the browser and go to http://localhost/sqlilabs
+Open the browser and go to http://localhost/sqlilabs_edited
 
 Click on "Setup/reset Database for labs" or go directly to http://localhost/sqlilabs/sql-connections/setup-db.php
 
