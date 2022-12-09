@@ -15,7 +15,7 @@ if(!isset($_COOKIE['uname']))
 	//including the Mysql connect parameters.
 	include("../sql-connections/sql-connect.php");
 
-	echo "<div style=' margin-top:20px;color:#FFF; font-size:24px; text-align:center'> Welcome&nbsp;&nbsp;&nbsp;<font color='#FF0000'> Dhakkan </font><br></div>";
+	echo "<div style=' margin-top:20px;color:#FFF; font-size:24px; text-align:center'> Welcome&nbsp;&nbsp;&nbsp;<font color='#FF0000'> S4iz4r </font><br></div>";
 	echo "<div  align='center' style='margin:20px 0px 0px 510px;border:20px; background-color:#0CF; text-align:center;width:400px; height:150px;'>";
 	echo "<div style='padding-top:10px; font-size:15px;'>";
  

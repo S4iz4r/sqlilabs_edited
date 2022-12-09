@@ -6,7 +6,7 @@
 </head>
 
 <body bgcolor="#000000">
-<div style=" margin-top:70px;color:#FFF; font-size:23px; text-align:center">Welcome&nbsp;&nbsp;&nbsp;<font color="#FF0000"> Dhakkan </font><br>
+<div style=" margin-top:70px;color:#FFF; font-size:23px; text-align:center">Welcome&nbsp;&nbsp;&nbsp;<font color="#FF0000"> S4iz4r </font><br>
 <font size="3" color="#FFFF00">
 
 <?php

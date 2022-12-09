@@ -6,7 +6,7 @@
 </head>
 
 <body bgcolor="#000000">
-<div style=" margin-top:20px;color:#FFF; font-size:24px; text-align:center"> Welcome&nbsp;&nbsp;<font color="#FF0000"> Dhakkan </font><br></div>
+<div style=" margin-top:20px;color:#FFF; font-size:24px; text-align:center"> Welcome&nbsp;&nbsp;<font color="#FF0000"> S4iz4r </font><br></div>
 
 <div  align="center" style="margin:40px 0px 0px 520px;border:20px; background-color:#0CF; text-align:center; width:400px; height:150px;">
 
@@ -64,7 +64,7 @@ if(isset($_POST['uname']) && isset($_POST['passwd']))
         //echo "Input password after addslashes is : ".$passwd;    
 
 	// connectivity 
-	mysqli_query("SET NAMES gbk");
+	mysqli_query($con, "SET NAMES gbk");
 	@$sql="SELECT username, password FROM users WHERE username='$uname' and password='$passwd' LIMIT 0,1";
 	$result=mysqli_query($con, $sql);
 	$row = mysqli_fetch_array($result, MYSQLI_BOTH);

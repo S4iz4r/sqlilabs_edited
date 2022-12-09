@@ -9,7 +9,7 @@
 
 <div style=" margin-top:20px;color:#FFF; font-size:24px; text-align:center"> 
 Welcome&nbsp;&nbsp;&nbsp;
-<font color="#FF0000"> Dhakkan </font>
+<font color="#FF0000"> S4iz4r </font>
 <br>
 </div>
 
