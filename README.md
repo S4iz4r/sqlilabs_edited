@@ -5,7 +5,7 @@ that was originally created by Audi-1 "Dhakkan". Later it was modified by Rinkis
 
 - Rinkish left the work incomplete. More than a half of the laboratories, including some challenges,
 were non-functional. I have taken the liberty of continuing with the work
-and finishing modifying all the .php that did not work, thus leaving 100% of the labs functional.
+and finishing modifying all the .php that did not work, thus leaving almost 100% of the labs functional.
 
 - Actually not working in PHP version 8!
 
@@ -27,9 +27,9 @@ Place sqlilabs_edited folder into /var/www/html/
 
 > use mysql;
 
-> CREATE USER test IDENTIFIED BY 'test123'; or create the user you want, but remenber to modify the data in /sql-connections/db-creds.php
+> CREATE USER 'test'@'localhost' IDENTIFIED BY 'test123'; or create the user you want, but remenber to modify the data in /sql-connections/db-creds.php
 
-> GRANT ALL PRIVILEGES ON \*.\* TO 'test'@'localhost' IDENTIFIED BY 'test123';
+> GRANT ALL PRIVILEGES ON \*.\* TO 'test'@'localhost';
 
 > exit;
 
